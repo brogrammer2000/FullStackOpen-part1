@@ -73,3 +73,101 @@ const App = () => {
 };
 
 export default App;
+
+//! Below is the practice code
+
+// import React, { useState } from "react";
+
+// const Display = (props) => {
+//   return <div> {props.counter} </div>;
+// };
+
+// const Button = (props) => {
+//   return <button onClick={props.method}> {props.title} </button>;
+// };
+
+// const App = () => {
+//   let [counter, setCounter] = useState(0);
+//   // setTimeout(() => setCounter(counter + 1), 1000);
+//   // console.log("rendering...", counter);
+
+//   // const handleCLick = () => console.log("click");
+//   const increaseByOne = () => setCounter(counter + 1);
+//   const resetCounter = () => setCounter(0);
+//   const decreaseByOne = () => setCounter(counter - 1);
+
+//   return (
+//     <div>
+//       <Button method={increaseByOne} title="Plus" />
+//       <Button method={resetCounter} title="Reset" />
+//       <Button method={decreaseByOne} title="Minus" />
+
+//       <Display counter={counter} />
+//     </div>
+//   );
+// };
+
+// const App = () => {
+//   // let [left, setLeft] = useState(0);
+//   // let [right, setRight] = useState(0);
+//   let [clicks, setClicks] = useState({ left: 0, right: 0 });
+//   let [allClicks, setAllClicks] = useState([]);
+
+//   const leftClickHandler = () => {
+//     setClicks({ ...clicks, left: clicks.left + 1 });
+//     setAllClicks(allClicks.concat("L"));
+//     // setClicks(clicks.left + 1);
+//   };
+
+//   const rightClickHandler = () => {
+//     setClicks({ ...clicks, right: clicks.right + 1 });
+//     setAllClicks(allClicks.concat("R"));
+//   };
+
+//   const History = ({ allClicks }) => {
+//     if (allClicks.length === 0) {
+//       return (
+//         <div>
+//           <p> This app works with buttons</p>
+//         </div>
+//       );
+//     } else {
+//       return (
+//         <div>
+//           <p> Clicking history: {allClicks.join("")}</p>
+//         </div>
+//       );
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <script src="http://localhost:8097"></script>
+//       {clicks.left}
+//       <button onClick={leftClickHandler}> Left </button>
+//       <button onClick={rightClickHandler}> Right </button>
+//       {clicks.right}
+//       <History allClicks={allClicks} />
+//     </div>
+//   );
+// };
+
+// const Button = (props) => {
+//   return (
+//     <div>
+//       <button onClick={props.eventHandler}>{props.text}</button>
+//     </div>
+//   );
+// };
+
+// const App = () => {
+//   let [value, setValue] = useState(10);
+//   return (
+//     <div>
+//       <p>{value}</p>
+//       <button onClick={() => setValue(0)}> reset value to 0</button>
+//     </div>
+//   );
+// };
+
+//export default App;
